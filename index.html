@@ -1,1 +1,1072 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWIJA Enterprise | Professional Sanitary Ware Supply Company</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Inter & Outfit for modern clean typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#D96B00',      /* Extracted from DWIJA brand name */
+                            darkorange: '#B85800',
+                            lightorange: '#FFF5EB',
+                            dark: '#111827',        /* Extracted from ENTERPRISE text */
+                            charcoal: '#1F2937',
+                            slate: '#4B5563',
+                            brass: '#D4AF37',       /* Brass metallic touch */
+                            chrome: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFC;
+            color: #1F2937;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(#E5E7EB 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+        }
+        .card-shadow-hover:hover {
+            box-shadow: 0 20px 35px -5px rgba(217, 107, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-3px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D96B00;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800 bg-slate-50 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo (Directly inspired by business card style) -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md group-hover:bg-brand-darkorange transition-colors">
+                        DE
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black font-heading tracking-tight text-brand-orange leading-none">DWIJA</span>
+                        <span class="text-xs font-bold tracking-widest text-brand-dark uppercase leading-tight">ENTERPRISE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+                    <a href="#home" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">Home</a>
+                    <a href="#about" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">About Us</a>
+                    <a href="#catalog" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">Product Catalog</a>
+                    <a href="#features" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">Why Choose Us</a>
+                    <a href="#rfq" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">Bulk Quote</a>
+                    <a href="#contact" class="hover:text-brand-orange transition-colors py-1 border-b-2 border-transparent hover:border-brand-orange">Contact</a>
+                </nav>
+
+                <!-- Quick Action Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/919638053380?text=Hello%20DWIJA%20Enterprise,%20I%20am%20interested%20in%20your%20sanitary%20ware%20products." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Quote</span>
+                    </a>
+                    <a href="tel:9638053380" class="inline-flex items-center gap-2 bg-brand-dark hover:bg-gray-800 text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>96380 53380</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-700 hover:text-brand-orange focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">About Us</a>
+            <a href="#catalog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">Product Catalog</a>
+            <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">Why Choose Us</a>
+            <a href="#rfq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">Bulk RFQ</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-brand-lightorange hover:text-brand-orange">Contact</a>
+            <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+                <a href="https://wa.me/919638053380" target="_blank" class="w-full text-center bg-emerald-600 text-white py-2.5 rounded-lg font-medium flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Inquiry
+                </a>
+                <a href="tel:9638053380" class="w-full text-center bg-brand-dark text-white py-2.5 rounded-lg font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call +91 96380 53380
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-grid-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-slate-50 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lightorange border border-orange-200 text-brand-orange font-semibold text-xs uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                        Direct Manufacturer & Supplier • GIDC Jamnagar
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-tight">
+                        Precision Brass Fittings & <span class="text-brand-orange">Sanitary Ware</span> Components
+                    </h1>
+
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Supplying premium ceramic disc cartridges, heavy brass spindles, chrome angle valves, and luxury sanitary hardware manufactured with precision tolerances.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#catalog" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-orange hover:bg-brand-darkorange text-white font-semibold text-base shadow-lg shadow-orange-500/20 transition-all flex items-center justify-center gap-3">
+                            <span>Browse Catalog</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#rfq" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-brand-dark font-semibold text-base transition-all flex items-center justify-center gap-2 border border-slate-200">
+                            <i class="fa-solid fa-calculator text-brand-orange"></i>
+                            <span>Request Bulk RFQ</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gray-100 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-heading text-brand-dark">100%</div>
+                            <div class="text-xs text-gray-500 font-medium">Virgin Brass Material</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-heading text-brand-orange">500k+</div>
+                            <div class="text-xs text-gray-500 font-medium">Lifecycle Tested</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-heading text-brand-dark">Phase 3</div>
+                            <div class="text-xs text-gray-500 font-medium">GIDC Jamnagar Hub</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Feature Cards Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Hero Showcase Container -->
+                        <div class="bg-white p-6 rounded-2xl card-shadow border border-gray-100 relative">
+                            <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Featured Product Showcase</span>
+                                <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">In Stock</span>
+                            </div>
+
+                            <!-- Interactive Product Preview Container -->
+                            <div class="bg-slate-900 rounded-xl p-8 flex flex-col items-center justify-center relative overflow-hidden group min-h-[300px]" id="hero-preview-box">
+                                <div class="absolute top-3 right-3 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-mono">
+                                    Grade: CW617N Brass
+                                </div>
+                                
+                                <!-- Dynamic Hero Graphic -->
+                                <div id="hero-graphic" class="w-full h-48 flex items-center justify-center transition-all duration-500 transform group-hover:scale-105">
+                                    <!-- Rendered dynamically via JS -->
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <h3 id="hero-product-title" class="text-white font-bold text-lg font-heading">Heavy Brass Ceramic Disc Spindle</h3>
+                                    <p id="hero-product-sub" class="text-gray-400 text-xs mt-1">Half-Turn Precision Headwork Cartridge</p>
+                                </div>
+                            </div>
+
+                            <!-- Thumbnail Selector Strip -->
+                            <div class="grid grid-cols-4 gap-2 mt-4">
+                                <button onclick="switchHeroProduct(0)" class="hero-thumb active border-2 border-brand-orange rounded-lg p-2 bg-slate-50 hover:bg-orange-50 transition text-center flex flex-col items-center">
+                                    <i class="fa-solid fa-gears text-brand-orange text-lg"></i>
+                                    <span class="text-[10px] font-bold mt-1 text-gray-700">Brass Spindle</span>
+                                </button>
+                                <button onclick="switchHeroProduct(1)" class="hero-thumb border-2 border-transparent hover:border-gray-300 rounded-lg p-2 bg-slate-50 hover:bg-orange-50 transition text-center flex flex-col items-center">
+                                    <i class="fa-solid fa-arrows-left-right-to-line text-brand-dark text-lg"></i>
+                                    <span class="text-[10px] font-bold mt-1 text-gray-700">Long Shaft</span>
+                                </button>
+                                <button onclick="switchHeroProduct(2)" class="hero-thumb border-2 border-transparent hover:border-gray-300 rounded-lg p-2 bg-slate-50 hover:bg-orange-50 transition text-center flex flex-col items-center">
+                                    <i class="fa-solid fa-faucet text-slate-600 text-lg"></i>
+                                    <span class="text-[10px] font-bold mt-1 text-gray-700">Chrome Cock</span>
+                                </button>
+                                <button onclick="switchHeroProduct(3)" class="hero-thumb border-2 border-transparent hover:border-gray-300 rounded-lg p-2 bg-slate-50 hover:bg-orange-50 transition text-center flex flex-col items-center">
+                                    <i class="fa-solid fa-crown text-amber-500 text-lg"></i>
+                                    <span class="text-[10px] font-bold mt-1 text-gray-700">Gold Finish</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 to-gray-900 rounded-2xl p-8 lg:p-12 text-white shadow-xl relative overflow-hidden">
+                <!-- Background Decorative Brass Circles -->
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-brand-orange/10 blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="inline-block px-3 py-1 bg-brand-orange/20 border border-brand-orange/40 rounded-full text-brand-orange text-xs font-bold uppercase tracking-wider">
+                            About DWIJA ENTERPRISE
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading leading-tight">
+                            Jamnagar’s Trusted Supply Partner for High-Grade Sanitary Fitting Hardware
+                        </h2>
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                            Based in <strong class="text-white">Phase 3, Dared, GIDC, Jamnagar</strong> (Gujarat) — India's premier industrial brass center — <strong>DWIJA Enterprise</strong> specializes in the manufacturing and B2B supply of high-precision brass ceramic disc cartridges, long-spindle tap headworks, and sleek sanitary angle cocks in chrome & gold finishes.
+                        </p>
+                        <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Precision Engineering</h4>
+                                    <p class="text-xs text-gray-400">CNC Machined threads for smooth fitment & zero leaks.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">High Quality Ceramics</h4>
+                                    <p class="text-xs text-gray-400">Durable 95% alumina ceramic discs resistant to hard water.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Business Card Representation -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="w-full max-w-sm bg-white text-gray-800 rounded-xl p-6 shadow-2xl border-2 border-amber-400/30 transform hover:scale-[1.02] transition-transform">
+                            <div class="flex items-center justify-between border-b border-gray-200 pb-4">
+                                <div>
+                                    <span class="text-2xl font-black font-heading tracking-tight text-brand-orange leading-none block">DWIJA</span>
+                                    <span class="text-sm font-bold tracking-widest text-brand-dark uppercase">ENTERPRISE</span>
+                                </div>
+                                <i class="fa-solid fa-award text-2xl text-brand-orange"></i>
+                            </div>
+
+                            <p class="text-xs text-gray-500 font-medium my-3">Professional Sanitary Ware Supply Company</p>
+
+                            <div class="space-y-2.5 text-xs text-gray-700 font-medium pt-2 border-t border-gray-100">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-user text-brand-orange w-4 text-center"></i>
+                                    <span class="font-bold text-gray-900">Kuldip Patel</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-brand-orange w-4 text-center"></i>
+                                    <span>+91 96380 53380 / +91 96380 32380</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-brand-orange w-4 text-center mt-0.5"></i>
+                                    <span>Phase 3, Dared, GIDC, Jamnagar, Gujarat</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px]">
+                                <span class="text-gray-400">Verified Business Partner</span>
+                                <a href="https://wa.me/919638053380" target="_blank" class="text-emerald-600 font-bold hover:underline flex items-center gap-1">
+                                    <i class="fa-brands fa-whatsapp"></i> Chat Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100/60 px-3 py-1 rounded-full border border-orange-200">
+                    Product Catalog
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3 font-heading">
+                    Sanitary Valves, Spindles & Fittings
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">
+                    Explore our engineered product range crafted for sanitaryware manufacturers, wholesalers, and plumbers.
+                </p>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="filter-container">
+                    <button onclick="filterCatalog('all')" class="filter-btn active px-5 py-2 rounded-lg text-xs font-bold transition-all bg-brand-orange text-white shadow-sm">
+                        All Products
+                    </button>
+                    <button onclick="filterCatalog('spindle')" class="filter-btn px-5 py-2 rounded-lg text-xs font-bold transition-all bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                        Brass Spindles & Cartridges
+                    </button>
+                    <button onclick="filterCatalog('long-spindle')" class="filter-btn px-5 py-2 rounded-lg text-xs font-bold transition-all bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                        Long Shaft Spindles
+                    </button>
+                    <button onclick="filterCatalog('angle-cock')" class="filter-btn px-5 py-2 rounded-lg text-xs font-bold transition-all bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                        Angle Valves & Cocks
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                <!-- Products dynamically generated by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <div id="tech-modal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 card-shadow relative animate-fade-in max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center text-lg font-bold" id="modal-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                    <h3 id="modal-title" class="text-xl font-bold font-heading text-brand-dark">Product Title</h3>
+                    <span id="modal-category" class="text-xs text-brand-orange font-semibold uppercase">Category</span>
+                </div>
+            </div>
+
+            <div id="modal-content" class="space-y-4 text-sm text-gray-600 border-t border-gray-100 pt-4">
+                <!-- Modal content injected via JS -->
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-end gap-3">
+                <button onclick="closeModal()" class="px-4 py-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs font-semibold">
+                    Close
+                </button>
+                <a id="modal-wa-btn" href="#" target="_blank" class="px-5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    Inquire for Bulk Order
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="features" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100/60 px-3 py-1 rounded-full">
+                    Quality Assurance
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3 font-heading">
+                    Why DWIJA Enterprise is Your Preferred Hardware Supplier
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 card-shadow-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">High-Grade Brass</h3>
+                    <p class="text-gray-600 text-xs mt-2 leading-relaxed">
+                        Forged and CNC machined from corrosion-resistant virgin brass alloys ensuring structural integrity and zero micro-cracks.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 card-shadow-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Leak-Proof Ceramic Discs</h3>
+                    <p class="text-gray-600 text-xs mt-2 leading-relaxed">
+                        Fitted with diamond-hard polished ceramic discs capable of enduring high water pressures and over 500,000 opening cycles.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 card-shadow-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Wholesale B2B Pricing</h3>
+                    <p class="text-gray-600 text-xs mt-2 leading-relaxed">
+                        Direct GIDC Jamnagar pricing structure with maximum cost efficiency for OEM manufacturers and hardware distributors.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 card-shadow-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Pan-India Dispatch</h3>
+                    <p class="text-gray-600 text-xs mt-2 leading-relaxed">
+                        Reliable bulk packaging and logistics handling to deliver orders safely to sanitary hubs across Gujarat and India.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="rfq" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-brand-orange/20 px-3 py-1 rounded-full border border-brand-orange/30">
+                        Instant Quotation Tool
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading leading-tight">
+                        Need Bulk Quantities for Manufacturing or Wholesale?
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Select your required products, estimate required quantities, and generate an instant RFQ directly sent to Kuldip Patel via WhatsApp for immediate stock availability & discount rate confirmation.
+                    </p>
+
+                    <div class="space-y-3 pt-2 text-xs text-gray-300">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange text-base"></i>
+                            <span>Custom thread tapping and spline counts available upon request</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange text-base"></i>
+                            <span>Minimum Order Quantity (MOQ) flexibilities for bulk buyers</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange text-base"></i>
+                            <span>Samples available for quality evaluation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold font-heading text-brand-dark mb-4 pb-2 border-b border-gray-100 flex items-center justify-between">
+                            <span>Request Bulk Price Quote</span>
+                            <span class="text-xs font-normal text-gray-500">Fast Response</span>
+                        </h3>
+
+                        <form id="rfq-form" onsubmit="handleRFQSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 mb-1">Your Name / Company</label>
+                                    <input type="text" id="rfq-name" required placeholder="e.g. Rajesh Traders" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 mb-1">Phone / WhatsApp Number</label>
+                                    <input type="tel" id="rfq-phone" required placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 mb-1">Select Primary Product</label>
+                                    <select id="rfq-product" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none bg-white">
+                                        <option value="Brass Ceramic Spindle 1/2 Inch">Brass Ceramic Disc Spindle 1/2"</option>
+                                        <option value="Extended Shaft Brass Ceramic Spindle">Extended Shaft Brass Ceramic Spindle</option>
+                                        <option value="Pair Brass Tap Valve Fitting Set">Pair Brass Tap Valve Cartridges</option>
+                                        <option value="Modern Chrome Finish Angle Cock">Modern Chrome Finish Angle Cock</option>
+                                        <option value="Luxury Gold Finish Brass Angle Cock">Luxury Gold Finish Brass Angle Cock</option>
+                                        <option value="Custom Mixed Hardware Requirements">Custom Mixed Order</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 mb-1">Estimated Quantity (Pcs)</label>
+                                    <select id="rfq-qty" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none bg-white">
+                                        <option value="200 - 500 Pcs">200 - 500 Pcs (Trial Order)</option>
+                                        <option value="500 - 1,000 Pcs">500 - 1,000 Pcs</option>
+                                        <option value="1,000 - 5,000 Pcs">1,000 - 5,000 Pcs (Wholesale)</option>
+                                        <option value="5,000+ Pcs">5,000+ Pcs (OEM Direct)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Delivery City / State</label>
+                                <input type="text" id="rfq-location" placeholder="e.g. Ahmedabad, Gujarat / Delhi / Morbi" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Additional Specifications / Notes</label>
+                                <textarea id="rfq-notes" rows="2" placeholder="Specify thread size, handle spline count, or custom finishing requirements..." class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg text-sm transition shadow-md flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                Send RFQ via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100/60 px-3 py-1 rounded-full">
+                    Get In Touch
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3 font-heading">
+                    Contact DWIJA Enterprise
+                </h2>
+                <p class="text-gray-600 text-sm mt-2">
+                    Connect with us for direct factory rates, product inquiries, or visiting our unit in GIDC Jamnagar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Contact Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 text-center card-shadow-hover transition">
+                    <div class="w-14 h-14 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Key Contact</h3>
+                    <p class="text-base font-semibold text-brand-orange mt-1">Kuldip Patel</p>
+                    <p class="text-xs text-gray-500 mt-1">Proprietor / Sales Head</p>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 text-center card-shadow-hover transition">
+                    <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Phone & WhatsApp</h3>
+                    <div class="mt-2 space-y-1">
+                        <a href="tel:9638053380" class="block text-sm font-semibold text-gray-800 hover:text-brand-orange">+91 96380 53380</a>
+                        <a href="tel:9638032380" class="block text-sm font-semibold text-gray-800 hover:text-brand-orange">+91 96380 32380</a>
+                    </div>
+                </div>
+
+                <!-- Contact Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-gray-100 text-center card-shadow-hover transition">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark font-heading">Factory Address</h3>
+                    <p class="text-xs text-gray-600 mt-2 leading-relaxed font-medium">
+                        Phase 3, Dared, GIDC,<br>
+                        Jamnagar - 361004, Gujarat, India
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Jamnagar GIDC Info Box -->
+            <div class="mt-12 bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 p-6 rounded-2xl border border-orange-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-orange text-white flex items-center justify-center text-xl shrink-0 font-bold">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-base">Direct Factory Supply Hub</h4>
+                        <p class="text-xs text-gray-600">Located in the heart of Jamnagar Brass Industrial Cluster for quick raw material sourcing and rapid production turnaround.</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/919638053380?text=Hello%20Kuldip%20Patel,%20I%20would%20like%20to%20inquire%20about%20DWIJA%20Enterprise%20products." target="_blank" class="shrink-0 bg-brand-orange hover:bg-brand-darkorange text-white px-6 py-2.5 rounded-xl text-xs font-bold transition">
+                    Connect On WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-gray-800">
+                
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded bg-brand-orange text-white flex items-center justify-center font-heading font-extrabold text-sm">
+                            DE
+                        </div>
+                        <span class="text-xl font-black font-heading tracking-tight text-brand-orange">DWIJA <span class="text-white text-xs tracking-widest uppercase font-sans">ENTERPRISE</span></span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Professional Sanitary Ware Supply Company specializing in precision brass cartridges, valves, and sanitary fittings.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-heading text-white mb-3 uppercase tracking-wider">Products</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#catalog" class="hover:text-brand-orange transition">Brass Ceramic Spindles</a></li>
+                        <li><a href="#catalog" class="hover:text-brand-orange transition">Extended Shaft Spindles</a></li>
+                        <li><a href="#catalog" class="hover:text-brand-orange transition">Chrome Angle Valves</a></li>
+                        <li><a href="#catalog" class="hover:text-brand-orange transition">Gold Angle Cocks</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-heading text-white mb-3 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#about" class="hover:text-brand-orange transition">About Company</a></li>
+                        <li><a href="#features" class="hover:text-brand-orange transition">Quality Assurance</a></li>
+                        <li><a href="#rfq" class="hover:text-brand-orange transition">Bulk Quote Request</a></li>
+                        <li><a href="#contact" class="hover:text-brand-orange transition">Contact Details</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-heading text-white mb-3 uppercase tracking-wider">Factory Hub</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Kuldip Patel<br>
+                        Phase 3, Dared, GIDC,<br>
+                        Jamnagar, Gujarat<br>
+                        Mob: +91 96380 53380 / 96380 32380
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 DWIJA Enterprise. All Rights Reserved. Professional Sanitary Ware Supply Company.</p>
+                <p class="flex items-center gap-1">
+                    <span>Designed with clean precision for B2B Supply</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* Product Catalog Dataset corresponding to provided product photos */
+        const catalogProducts = [
+            {
+                id: 'p1',
+                title: 'Brass Ceramic Disc Cartridge / Spindle',
+                category: 'spindle',
+                code: 'DE-BS-01',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full text-amber-500">
+                        <!-- Brass Valve Body -->
+                        <rect x="75" y="40" width="50" height="30" rx="3" fill="#D4AF37" stroke="#B8860B" stroke-width="2"/>
+                        <!-- Spline Shaft -->
+                        <rect x="88" y="10" width="24" height="30" fill="#E6CA65" stroke="#B8860B" stroke-width="1.5"/>
+                        <line x1="92" y1="10" x2="92" y2="40" stroke="#B8860B" stroke-width="1"/>
+                        <line x1="98" y1="10" x2="98" y2="40" stroke="#B8860B" stroke-width="1"/>
+                        <line x1="104" y1="10" x2="104" y2="40" stroke="#B8860B" stroke-width="1"/>
+                        <line x1="108" y1="10" x2="108" y2="40" stroke="#B8860B" stroke-width="1"/>
+                        <!-- Main Hex Collar -->
+                        <polygon points="65,70 135,70 125,90 75,90" fill="#C59B27" stroke="#967210" stroke-width="2"/>
+                        <!-- O-Ring Seal (Black) -->
+                        <rect x="70" y="90" width="60" height="12" rx="4" fill="#1F2937"/>
+                        <!-- Lower Housing -->
+                        <rect x="75" y="102" width="50" height="40" fill="#D4AF37" stroke="#B8860B" stroke-width="2"/>
+                        <rect x="85" y="115" width="30" height="15" rx="2" fill="#FFFFFF" opacity="0.9"/>
+                        <!-- Bottom Silicone Red/Orange Gasket -->
+                        <rect x="72" y="142" width="56" height="14" rx="4" fill="#D96B00"/>
+                        <circle cx="100" cy="149" r="10" fill="#7C2D12"/>
+                    </svg>
+                `,
+                shortDesc: 'Standard 1/2" brass ceramic disc spindle for bib cocks and wall mixers.',
+                specs: {
+                    'Material Grade': 'High Quality Forged CW617N Brass',
+                    'Disc Type': '95% Alumina Ceramic Disc (Quarter/Half Turn)',
+                    'Thread Size': 'G 1/2" Standard ISO Fitting',
+                    'Spline Teeth': '20 Teeth Standard Broaching',
+                    'Working Temp': '0°C to 90°C Hot & Cold Water',
+                    'Test Pressure': '16 Bar Hydrostatic Leak Test'
+                }
+            },
+            {
+                id: 'p2',
+                title: 'Extended Shaft Brass Ceramic Spindle',
+                category: 'long-spindle',
+                code: 'DE-LS-02',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <!-- Long Stem Shaft -->
+                        <rect x="91" y="10" width="18" height="90" fill="#E6CA65" stroke="#B8860B" stroke-width="1.5"/>
+                        <line x1="95" y1="10" x2="95" y2="100" stroke="#B8860B" stroke-width="1"/>
+                        <line x1="100" y1="10" x2="100" y2="100" stroke="#B8860B" stroke-width="1"/>
+                        <line x1="105" y1="10" x2="105" y2="100" stroke="#B8860B" stroke-width="1"/>
+                        <!-- Collar & Hex -->
+                        <rect x="72" y="100" width="56" height="20" rx="2" fill="#D4AF37" stroke="#967210" stroke-width="2"/>
+                        <rect x="76" y="120" width="48" height="10" rx="3" fill="#1F2937"/>
+                        <!-- Cartridge Body -->
+                        <rect x="78" y="130" width="44" height="35" fill="#C59B27" stroke="#967210" stroke-width="2"/>
+                        <rect x="88" y="140" width="24" height="12" fill="#FFFFFF" opacity="0.9"/>
+                        <!-- Base Orange Seal -->
+                        <rect x="76" y="165" width="48" height="12" rx="3" fill="#EA580C"/>
+                    </svg>
+                `,
+                shortDesc: 'Extended stem spindle designed specifically for concealed flush valves & deep taps.',
+                specs: {
+                    'Material Grade': 'Extruded Heavy Duty Brass',
+                    'Stem Length': 'Extended 75mm / 90mm Shaft',
+                    'Thread Size': '1/2" BSP Standard Thread',
+                    'Operating Cycles': '> 500,000 Smooth Turn Cycles',
+                    'Application': 'Concealed Stop Cocks & High-End Mixers',
+                    'Quality Standard': 'Zero Drip Seal Technology'
+                }
+            },
+            {
+                id: 'p3',
+                title: 'Heavy Duty Pair Brass Tap Valve Set',
+                category: 'spindle',
+                code: 'DE-PS-03',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <!-- Left Vertical Cartridge -->
+                        <g transform="translate(-15,0)">
+                            <rect x="65" y="30" width="20" height="25" fill="#E6CA65" stroke="#B8860B" stroke-width="1"/>
+                            <rect x="55" y="55" width="40" height="20" fill="#D4AF37" stroke="#B8860B" stroke-width="1.5"/>
+                            <rect x="58" y="75" width="34" height="8" rx="2" fill="#111827"/>
+                            <rect x="60" y="83" width="30" height="30" fill="#C59B27" stroke="#B8860B" stroke-width="1.5"/>
+                            <rect x="58" y="113" width="34" height="10" rx="2" fill="#DC2626"/>
+                        </g>
+                        <!-- Right Angled Cartridge -->
+                        <g transform="translate(100,70) rotate(35)">
+                            <rect x="0" y="0" width="20" height="25" fill="#E6CA65" stroke="#B8860B" stroke-width="1"/>
+                            <rect x="-10" y="25" width="40" height="20" fill="#D4AF37" stroke="#B8860B" stroke-width="1.5"/>
+                            <rect x="-7" y="45" width="34" height="8" rx="2" fill="#111827"/>
+                            <rect x="-5" y="53" width="30" height="30" fill="#C59B27" stroke="#B8860B" stroke-width="1.5"/>
+                            <rect x="-7" y="83" width="34" height="10" rx="2" fill="#DC2626"/>
+                        </g>
+                    </svg>
+                `,
+                shortDesc: 'Matched Clockwise & Counter-Clockwise (Hot/Cold) paired ceramic spindle set.',
+                specs: {
+                    'Package Content': '1 Clockwise + 1 Counter-Clockwise Pair',
+                    'Disc Material': 'High Density Ceramic Disc Plate',
+                    'Body Material': 'Lead-Free Environmentally Friendly Brass',
+                    'Flow Rate': 'Full flow high discharge performance',
+                    'Gasket Seal': 'Heat Resistant Red Silicone Ring',
+                    'Compatibility': 'Universal Basin Mixers & Deck Cocks'
+                }
+            },
+            {
+                id: 'p4',
+                title: 'Modern Chrome Finish Brass Angle Cock',
+                category: 'angle-cock',
+                code: 'DE-AC-04',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <!-- Chrome Body -->
+                        <rect x="85" y="20" width="30" height="40" rx="4" fill="#CBD5E1" stroke="#64748B" stroke-width="2"/>
+                        <!-- Top Operating Lever -->
+                        <rect x="60" y="20" width="80" height="14" rx="7" fill="#94A3B8" stroke="#475569" stroke-width="1.5"/>
+                        <circle cx="100" cy="27" r="4" fill="#E2E8F0"/>
+                        <!-- Main Cylindrical Valve -->
+                        <rect x="80" y="60" width="40" height="60" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+                        <!-- Horizontal Outlet Thread -->
+                        <rect x="40" y="80" width="40" height="24" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5"/>
+                        <line x1="45" y1="80" x2="45" y2="104" stroke="#64748B" stroke-width="1"/>
+                        <line x1="55" y1="80" x2="55" y2="104" stroke="#64748B" stroke-width="1"/>
+                        <line x1="65" y1="80" x2="65" y2="104" stroke="#64748B" stroke-width="1"/>
+                        <!-- Vertical Wall Inlet Thread -->
+                        <rect x="84" y="120" width="32" height="45" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5"/>
+                        <line x1="84" y1="130" x2="116" y2="130" stroke="#64748B" stroke-width="1"/>
+                        <line x1="84" y1="140" x2="116" y2="140" stroke="#64748B" stroke-width="1"/>
+                        <line x1="84" y1="150" x2="116" y2="150" stroke="#64748B" stroke-width="1"/>
+                    </svg>
+                `,
+                shortDesc: 'Premium electroplated multi-layer mirror chrome angle valve for bathrooms.',
+                specs: {
+                    'Finish': 'Multi-layer Nickel & Chrome Plating',
+                    'Core Valve': 'High Precision Ceramic Disc Cartridge',
+                    'Inlet/Outlet': '1/2" Male Thread Connection',
+                    'Body Weight': 'Heavy Solid Brass Cast Body',
+                    'Corrosion Test': 'Salt Spray Tested 24+ Hours',
+                    'Warranty': '7 Years Performance Guarantee'
+                }
+            },
+            {
+                id: 'p5',
+                title: 'Luxury Gold Finish Brass Angle Cock',
+                category: 'angle-cock',
+                code: 'DE-GC-05',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <!-- Gold Plated Body -->
+                        <rect x="85" y="20" width="30" height="40" rx="4" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+                        <!-- Top Lever Handle -->
+                        <rect x="55" y="20" width="90" height="14" rx="7" fill="#FBBF24" stroke="#B45309" stroke-width="1.5"/>
+                        <!-- Central Body -->
+                        <rect x="80" y="60" width="40" height="60" fill="#FCD34D" stroke="#B45309" stroke-width="2"/>
+                        <!-- Side Outlet -->
+                        <rect x="40" y="80" width="40" height="24" fill="#F59E0B" stroke="#B45309" stroke-width="1.5"/>
+                        <line x1="48" y1="80" x2="48" y2="104" stroke="#B45309" stroke-width="1"/>
+                        <line x1="58" y1="80" x2="58" y2="104" stroke="#B45309" stroke-width="1"/>
+                        <!-- Bottom Thread -->
+                        <rect x="84" y="120" width="32" height="45" fill="#F59E0B" stroke="#B45309" stroke-width="1.5"/>
+                        <line x1="84" y1="130" x2="116" y2="130" stroke="#B45309" stroke-width="1"/>
+                        <line x1="84" y1="140" x2="116" y2="140" stroke="#B45309" stroke-width="1"/>
+                    </svg>
+                `,
+                shortDesc: 'Royal gold PVD finished brass angle valve for luxury bathroom sanitary fittings.',
+                specs: {
+                    'Finish': 'PVD Gold Corrosion Resistant Coating',
+                    'Material': '100% Solid Brass Casting',
+                    'Cartridge': 'Smooth Quarter Turn Ceramic Valve',
+                    'Aesthetics': 'Premium Mirror Reflective Gold',
+                    'Pressure Resistance': 'Up to 10 Bar Operating Water Pressure',
+                    'Use Case': 'Designer Wash Basin & Geyser Connections'
+                }
+            },
+            {
+                id: 'p6',
+                title: 'High-Neck Brass Tap Spindle Mechanism',
+                category: 'long-spindle',
+                code: 'DE-HN-06',
+                imageSvg: `
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <!-- Long Stem -->
+                        <rect x="92" y="15" width="16" height="110" fill="#E6CA65" stroke="#B8860B" stroke-width="1.5"/>
+                        <!-- Thread Ring -->
+                        <rect x="82" y="80" width="36" height="10" fill="#B8860B"/>
+                        <!-- Hex Nut -->
+                        <polygon points="70,125 130,125 120,145 80,145" fill="#D4AF37" stroke="#967210" stroke-width="1.5"/>
+                        <rect x="76" y="145" width="48" height="10" fill="#111827"/>
+                        <rect x="80" y="155" width="40" height="20" fill="#C59B27"/>
+                        <rect x="78" y="175" width="44" height="10" fill="#1F2937"/>
+                    </svg>
+                `,
+                shortDesc: 'Specialized long-neck spindle with brass thread locking nut for heavy faucets.',
+                specs: {
+                    'Material': 'High Tensile Brass Rod Stock',
+                    'Stem Type': 'Extra Length Tapered Spline',
+                    'Lock Mechanism': 'Double Brass Nut Fastening',
+                    'Durability': 'High Resistance to Alkaline & Hard Water',
+                    'Application': 'Pillar Cocks & Kitchen Sink Mixers'
+                }
+            }
+        ];
+
+        function renderCatalog(products) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl border border-gray-100 p-6 card-shadow card-shadow-hover transition-all flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="bg-slate-900 rounded-xl p-4 flex items-center justify-center h-48 relative overflow-hidden group">
+                            <span class="absolute top-3 left-3 bg-white/10 text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                                ${p.code}
+                            </span>
+                            <div class="w-32 h-32 transition-transform duration-300 group-hover:scale-110">
+                                ${p.imageSvg}
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h3 class="font-bold text-lg text-brand-dark font-heading leading-snug">${p.title}</h3>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">${p.shortDesc}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between gap-2">
+                        <button onclick="openModal('${p.id}')" class="text-xs font-bold text-brand-orange hover:text-brand-darkorange flex items-center gap-1">
+                            <i class="fa-solid fa-circle-info"></i> Tech Specs
+                        </button>
+
+                        <a href="https://wa.me/919638053380?text=Hello%20DWIJA%20Enterprise,%20I%20want%20to%20inquire%20about%20Product:%20${encodeURIComponent(p.title)}%20(Code:%20${p.code})" 
+                           target="_blank" 
+                           class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Inquire
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        /* Filter function */
+        function filterCatalog(category) {
+            // Update button styles
+            const buttons = document.querySelectorAll('#filter-container .filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-orange', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+
+            event.target.classList.remove('bg-white', 'text-gray-700');
+            event.target.classList.add('bg-brand-orange', 'text-white', 'shadow-sm');
+
+            if (category === 'all') {
+                renderCatalog(catalogProducts);
+            } else {
+                const filtered = catalogProducts.filter(p => p.category === category);
+                renderCatalog(filtered);
+            }
+        }
+
+        /* Modal handling */
+        function openModal(id) {
+            const product = catalogProducts.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('modal-title').innerText = product.title;
+            document.getElementById('modal-category').innerText = `Product Code: ${product.code}`;
+            
+            let specsHtml = '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-50 p-4 rounded-xl border border-gray-100 mb-4">';
+            for (const [key, val] of Object.entries(product.specs)) {
+                specsHtml += `
+                    <div>
+                        <span class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider">${key}</span>
+                        <span class="text-xs font-semibold text-gray-800">${val}</span>
+                    </div>
+                `;
+            }
+            specsHtml += '</div>';
+
+            specsHtml += `<p class="text-xs text-gray-600 leading-relaxed">${product.shortDesc} Manufactured with strict Quality Control standards at Phase 3 GIDC Jamnagar facility.</p>`;
+
+            document.getElementById('modal-content').innerHTML = specsHtml;
+            document.getElementById('modal-wa-btn').href = `https://wa.me/919638053380?text=Hello%20DWIJA%20Enterprise,%20I%20am%20requesting%20bulk%20quote%20for%20${encodeURIComponent(product.title)}%20(${product.code})`;
+
+            document.getElementById('tech-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('tech-modal').classList.add('hidden');
+        }
+
+        const heroItems = [
+            {
+                title: 'Brass Ceramic Disc Spindle',
+                sub: 'Precision 1/2" Half-Turn Ceramic Headwork',
+                svg: catalogProducts[0].imageSvg
+            },
+            {
+                title: 'Extended Shaft Brass Spindle',
+                sub: 'Heavy Duty Stem for Concealed Flush Cocks',
+                svg: catalogProducts[1].imageSvg
+            },
+            {
+                title: 'Chrome Finish Angle Cock',
+                sub: 'Multi-layer Electroplated Brass Sanitary Valve',
+                svg: catalogProducts[3].imageSvg
+            },
+            {
+                title: 'Luxury Gold Finish Angle Cock',
+                sub: 'Royal PVD Finished Brass Fitting',
+                svg: catalogProducts[4].imageSvg
+            }
+        ];
+
+        function switchHeroProduct(index) {
+            const graphic = document.getElementById('hero-graphic');
+            const title = document.getElementById('hero-product-title');
+            const sub = document.getElementById('hero-product-sub');
+
+            graphic.innerHTML = `<div class="w-36 h-36">${heroItems[index].svg}</div>`;
+            title.innerText = heroItems[index].title;
+            sub.innerText = heroItems[index].sub;
+
+            // Update border states on thumbnails
+            const thumbs = document.querySelectorAll('.hero-thumb');
+            thumbs.forEach((t, i) => {
+                if (i === index) {
+                    t.classList.add('border-brand-orange');
+                    t.classList.remove('border-transparent');
+                } else {
+                    t.classList.remove('border-brand-orange');
+                    t.classList.add('border-transparent');
+                }
+            });
+        }
+
+        function handleRFQSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('rfq-name').value;
+            const phone = document.getElementById('rfq-phone').value;
+            const product = document.getElementById('rfq-product').value;
+            const qty = document.getElementById('rfq-qty').value;
+            const location = document.getElementById('rfq-location').value;
+            const notes = document.getElementById('rfq-notes').value;
+
+            const message = `*NEW BULK RFQ ENQUIRY*%0A%0A` +
+                            `*Company/Name:* ${encodeURIComponent(name)}%0A` +
+                            `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                            `*Product Required:* ${encodeURIComponent(product)}%0A` +
+                            `*Quantity:* ${encodeURIComponent(qty)}%0A` +
+                            `*Delivery Location:* ${encodeURIComponent(location)}%0A` +
+                            `*Notes/Specs:* ${encodeURIComponent(notes || 'N/A')}`;
+
+            window.open(`https://wa.me/919638053380?text=${message}`, '_blank');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Render default catalog
+            renderCatalog(catalogProducts);
+
+            // Initialize hero product
+            switchHeroProduct(0);
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu on click link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
